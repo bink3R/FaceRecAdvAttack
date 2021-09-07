@@ -15,12 +15,9 @@ sys.path.append(os.path.join(root_path, 'backbone'))
 
 warnings.filterwarnings("ignore")
 
-to_torch_tensor = torchvision.transforms.Compose([
-    torchvision.transforms.Resize((112, 112)),
-    torchvision.transforms.ToTensor(),
-    # torchvision.transforms.Lambda(lambda x: x.repeat(3, 1, 1)),
-    torchvision.transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
-    ])
+to_torch_tensor = torchvision.transforms.Compose([torchvision.transforms.ToTensor(),
+                                                  torchvision.transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
+                                                  ])
 to_pil_image = torchvision.transforms.Compose([torchvision.transforms.Normalize([-1, -1, -1], [2, 2, 2]),
                                                torchvision.transforms.ToPILImage()
                                                ])
