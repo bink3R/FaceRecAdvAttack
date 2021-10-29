@@ -1,5 +1,6 @@
-# FuckOPPOAI
+# FaceRecAdvAttack
 
+根据赛事方提供的Example Code 进行了优化，根据大量模型的ROI，缩小对抗样本干扰区域，减小扰动值；l2范数寻找最相似脸进行targeted attack
 在models文件夹中下载各种模型。百度云盘链接：https://pan.baidu.com/s/1t4BBqNurCmm6nBNjP7HFeQ 密码：MODE
 
 将比赛数据集放到images目录下，运行cal_likhood.ipynb可以得到一个json，每个键值记录相似度最高的三个图片
